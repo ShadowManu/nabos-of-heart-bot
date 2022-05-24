@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "node-telegram-bot-api": "^0.57.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "@nrwl/workspace": "14.1.7",
     "@types/jest": "27.4.1",
     "@types/node": "16.11.7",
+    "@types/node-telegram-bot-api": "^0.57.1",
     "@typescript-eslint/eslint-plugin": "~5.18.0",
     "@typescript-eslint/parser": "~5.18.0",
     "eslint": "~8.12.0",
