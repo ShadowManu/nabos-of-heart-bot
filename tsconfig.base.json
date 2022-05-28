@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {},
+    "strict": true,
     "esModuleInterop": true
   },
   "exclude": ["node_modules", "tmp"]

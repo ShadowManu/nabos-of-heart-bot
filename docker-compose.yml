@@ -5,17 +5,23 @@ services:
       context: .
       dockerfile: apps/bot/Dockerfile
     environment:
+      NTBA_FIX_319: enable
       TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
-  # db:
-  #   image: postgres:14.1-alpine
-  #   restart: always
-  #   environment:
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=postgres
-  #   ports:
-  #     - '5432:5432'
-  #   volumes:
-  #     - db:/var/lib/postgresql/data
-# volumes:
-#   db:
-#     driver: local
+      POSTGRES_HOST: postgres
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: postgres
+  postgres:
+    image: postgres:14.3
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+volumes:
+  postgres-data:
+    driver: local

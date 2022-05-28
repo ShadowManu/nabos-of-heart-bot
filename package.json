@@ -9,8 +9,13 @@
   },
   "private": true,
   "dependencies": {
+    "class-transformer": "^0.5.1",
     "node-telegram-bot-api": "^0.57.0",
-    "tslib": "^2.3.0"
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.3.0",
+    "typeorm": "^0.3.6",
+    "zod": "^3.17.3"
   },
   "devDependencies": {
     "@nrwl/cli": "14.1.7",

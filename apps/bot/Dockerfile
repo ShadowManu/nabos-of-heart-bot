@@ -9,7 +9,5 @@ RUN npm install
 COPY . .
 RUN npm run build -- bot
 
-FROM node:18.2.0
-WORKDIR /app
-COPY --from=0 /app/dist/apps/bot/* ./
-CMD ["node", "main.js"]
+# Run app
+CMD ["node", "dist/apps/bot/main.js"]
