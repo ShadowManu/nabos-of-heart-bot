@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  typeorm:
+    build:
+      context: .
+      dockerfile: apps/bot/Dockerfile
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: postgres
+    volumes:
+      - './apps:/app/apps'

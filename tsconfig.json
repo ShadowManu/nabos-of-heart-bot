@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // This is needed for TypeORM to work
+    "module": "commonjs"
+  }
+}
