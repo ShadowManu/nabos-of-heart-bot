@@ -12,3 +12,18 @@ services:
     volumes:
       - './apps:/app/apps'
       - './libs:/app/libs'
+      - '/mnt/c/Users/manue/Downloads/Telegram\ Desktop/ChatExport_2022-05-26:/app/bound'
+
+  importer:
+    build:
+      context: .
+      dockerfile: apps/importer/Dockerfile
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USERNAME: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: postgres
+    volumes:
+      - './apps:/app/apps'
+      - './libs:/app/libs'
+      - '/mnt/c/Users/manue/Downloads/Telegram\ Desktop/ChatExport_2022-05-26:/app/bound'
