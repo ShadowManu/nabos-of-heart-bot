@@ -11,3 +11,4 @@ services:
       POSTGRES_DATABASE: postgres
     volumes:
       - './apps:/app/apps'
+      - './libs:/app/libs'

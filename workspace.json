@@ -2,6 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "bot": "apps/bot"
+    "bot": "apps/bot",
+    "db": "libs/db",
+    "importer": "apps/importer"
   }
 }
