@@ -19,10 +19,11 @@
         }
       }
     },
-    "serve": {
+    "run": {
       "executor": "@nrwl/node:node",
       "options": {
-        "buildTarget": "importer:build"
+        "buildTarget": "importer:build",
+        "watch": false
       }
     },
     "lint": {
